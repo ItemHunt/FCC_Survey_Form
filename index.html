@@ -2,24 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="title"><h1>Customer Satisfaction Survey</h1></title>
-    <p id="description"> 
-        The survey aims to gather your feedback on our services to help us improve. Please share your thoughts and suggestions. Thank you for participating!
-    </p>
+    <title>Service Satisfaction Survey</title> <!-- The title tag should be here -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1 id="title">Service Satisfaction Survey</h1> <!-- This is the main heading -->
+    <p id="description"> 
+        The survey aims to gather your feedback on our services to help us improve. Please share your thoughts and suggestions. Thank you for participating!
+    </p>
     <form id="survey-form">
+        <label id="name-label">Name</label>
         <input id="name" type="text" required placeholder="Enter your name">
+
+        <label id="email-label">Email</label>
         <input id="email" type="email" required placeholder="Enter your Email">
-        <input id="number" type="number">
-        <button>Submit</button>
+
+        <label id="number-label">Age</label><p>(Optional)</p> 
+        <input id="number" type="number" min="18" max="120" placeholder="Enter your Age">
+
+        <label id="dropdown-label">Which option best describes your current role?</label>
+        <select id="dropdown">
+            <option value="Student">Student</option>
+            <option value="Full-Time-Job">Full Time Job</option>
+            <option value="Full-Time-Learner">Full Time Learner</option>
+            <option value="Prefer-not-to-say">Prefer not to say </option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label id="radio-label">Would you recommend our tutoring services to a friend?</label>
+        <input type="radio" id="Definitely" name="recommendation" value="Definitely">
+        <label for="Definitely">Definitely</label><br>
+
+        <input type="radio" id="Maybe" name="recommendation" value="Maybe">
+        <label for="Maybe">Maybe</label><br>
+
+        <input type="radio" id="Not-sure" name="recommendation" value="Not-sure">
+        <label for="Not-sure">Not sure</label><br>
+
+        <input type="radio" id="No" name="recommendation" value="No">
+        <label for="No">No</label>
+
+        <p>Select your hobbies:</p>
+        <input type="checkbox" id="reading" name="hobby" value="reading">
+        <label for="reading">Reading</label><br>
+
+        <input type="checkbox" id="traveling" name="hobby" value="traveling">
+        <label for="traveling">Traveling</label><br>
+
+        <input type="checkbox" id="cooking" name="hobby" value="cooking">
+        <label for="cooking">Cooking</label><br>
+
+        <input type="checkbox" id="gaming" name="hobby" value="gaming">
+        <label for="gaming">Gaming</label>
+        
+        <label for="comments">Enter your comments:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+
+        <br><button id="submit" type="submit">Submit</button>
     </form>
 </body>
 </html>
-
 
 
 
